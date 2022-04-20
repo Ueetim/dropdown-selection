@@ -35,7 +35,8 @@ menuLink.forEach(function (item) {
           });
 
           const cont = btn.parentElement.parentElement;
-          cont.removeChild(btn.parentElement);
+          // cont.removeChild(btn.parentElement);
+          btn.parentNode.style.display = 'none';
 
           displayAlert("item removed", "danger");
         });
