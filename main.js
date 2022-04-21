@@ -4,6 +4,10 @@ const alert = document.querySelector(".alert");
 const dropList = document.querySelector(".main_con");
 const checkbox = document.querySelector(".drop-down-check");
 const chev = document.querySelector(".chev");
+const json = document.querySelector(".json");
+
+
+let obj = {}; // to store the json generated from selected items
 
 menuLink.forEach(function (item) {
   // add item
@@ -23,6 +27,15 @@ menuLink.forEach(function (item) {
 
       displayAlert("item added", "success");
 
+      
+      // add the item to the json array
+      obj[`${item.getAttribute("id")}`] = `${item.textContent}`;
+      
+      let jsonDoc = JSON.stringify(obj);
+      json.textContent = jsonDoc;
+      console.log(json.textContent);
+
+
       //remove added item
       const cancelBtn = topLinks.querySelectorAll(".cancel-btn");
       cancelBtn.forEach(function (btn) {
@@ -33,6 +46,12 @@ menuLink.forEach(function (item) {
               link.classList.remove("added");
             }
           });
+
+          delete obj[btn.parentElement.dataset.id];
+
+          let jsonDoc = JSON.stringify(obj);
+          json.textContent = jsonDoc;
+          console.log(json.textContent);
 
           const cont = btn.parentElement.parentElement;
           // cont.removeChild(btn.parentElement);
