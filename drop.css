@@ -17,7 +17,7 @@ body{
 .main_con{
     width: 60%;
     flex-direction: column;
-    padding: 50px 0;
+    margin: 50px 0;
 }
 .drop1{
     width: 100%;
@@ -33,11 +33,14 @@ body{
 }
 
 .header {
+    /* background-color: rgb(245, 245, 245); */
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(122, 122, 122);
-    padding: 0 0 10px 0;
+    /* border-bottom: 1px solid rgb(122, 122, 122); */
+    box-shadow: inset 0px 0px 7px rgb(213, 213, 213);
+    padding: 10px;
 }
 
 .input_box_double{
@@ -45,6 +48,7 @@ body{
     flex-wrap: wrap;
     min-height: 70px;
     justify-content: flex-start;
+    /* align-items: flex-start; */
 }
 .input{
     width: max-content;
@@ -87,21 +91,22 @@ body{
     height: 0;
     width: 100%;
     overflow: hidden;
-    /* position: absolute; */
     left: 0;
     top: 50px;
-    box-shadow: 0 3px 8px rgb(165, 165, 167);
+    box-shadow: 0px 0px 7px rgb(204, 204, 204);
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     gap: 5px;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
 }
 .chev{
     cursor: pointer;
-    font-size: 15px;
-    padding: 8px;
+    font-size: 30px;
+    padding-bottom: 8px;
+    height: 35px;
+    width: 35px;
     background-color: rgb(228, 228, 228);
     border-radius: 5px;
     transition: background-color .3s;
